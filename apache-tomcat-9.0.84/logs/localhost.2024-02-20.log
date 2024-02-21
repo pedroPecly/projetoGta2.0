@@ -1,0 +1,931 @@
+20-Feb-2024 00:13:07.403 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Feb-2024 00:13:07.403 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Feb-2024 00:13:07.406 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@18918ab9')
+20-Feb-2024 01:23:52.082 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Feb-2024 01:23:52.082 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Feb-2024 11:49:06.511 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Feb-2024 11:49:06.512 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Feb-2024 11:49:06.514 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@475b796d')
+20-Feb-2024 12:16:43.778 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Feb-2024 12:16:43.778 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Feb-2024 14:30:22.461 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Feb-2024 14:30:22.461 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Feb-2024 14:30:22.464 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3d00c2ae')
+20-Feb-2024 14:31:51.763 SEVERE [http-nio-8080-exec-12] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [74] in the jsp file: [/formularioGames.jsp]
+listaJogos cannot be resolved to a variable
+71:                 <p>
+72:                     <label for="nome">Selecione o jogo:</label>
+73:                     <select name="nomeJogo">
+74:                         <%=listaJogos%>
+75:                     </select>
+76:                 </p>
+77:                 <p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:51)
+		at controller.GamesSrv.doPost(GamesSrv.java:166)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 14:42:15.094 SEVERE [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [74] in the jsp file: [/formularioGames.jsp]
+listaJogos cannot be resolved to a variable
+71:                 <p>
+72:                     <label for="nome">Selecione o jogo:</label>
+73:                     <select name="nomeJogo">
+74:                         <%=listaJogos%>
+75:                     </select>
+76:                 </p>
+77:                 <p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:52)
+		at controller.GamesSrv.doPost(GamesSrv.java:166)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 14:42:21.284 SEVERE [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [74] in the jsp file: [/formularioGames.jsp]
+listaJogos cannot be resolved to a variable
+71:                 <p>
+72:                     <label for="nome">Selecione o jogo:</label>
+73:                     <select name="nomeJogo">
+74:                         <%=listaJogos%>
+75:                     </select>
+76:                 </p>
+77:                 <p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:52)
+		at controller.GamesSrv.doPost(GamesSrv.java:166)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 15:04:39.697 SEVERE [http-nio-8080-exec-96] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [59] in the jsp file: [/formularioGames.jsp]
+The method equal(String) is undefined for the type String
+56:     <main>
+57:         <div id="formulario">
+58:             <form action="GamesSrv" method="POST" autocomplete="off">
+59:                 <%if (acao.equal("preAdicionarJogo")) { %>
+60:                     <p>
+61:                         <input type="hidden" name="acao" value="adicionarJogo">
+62:                     </p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:51)
+		at controller.GamesSrv.doPost(GamesSrv.java:169)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 16:39:27.510 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Feb-2024 16:39:27.510 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Feb-2024 18:00:03.366 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Feb-2024 18:00:03.366 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Feb-2024 18:00:03.372 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@1ae37be2')
+20-Feb-2024 18:19:03.064 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Feb-2024 18:19:03.064 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Feb-2024 19:30:54.441 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Feb-2024 19:30:54.442 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Feb-2024 19:30:54.446 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@52ec5ba6')
+20-Feb-2024 19:33:14.511 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Feb-2024 19:33:14.511 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Feb-2024 19:36:25.406 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Feb-2024 19:36:25.406 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Feb-2024 19:36:25.410 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@130bd00e')
+20-Feb-2024 20:49:26.951 SEVERE [http-nio-8080-exec-68] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [67] in the jsp file: [/listagem.jsp]
+Syntax error, insert ") Statement" to complete IfStatement
+64:                         <%=listaHTML %>
+65:                     </tbody>
+66:                 </table>
+67:                 <% if (acao != null && (acao.equals("listagemJogos")) { %>
+68:                     <center>
+69:                         <form action="GamesSrv" method="POST">
+70:                             <p>
+
+
+An error occurred at line: [86] in the jsp file: [/listagem.jsp]
+Syntax error, insert ") Statement" to complete IfStatement
+83:                         </form>
+84:                     </center>
+85:                 <% } %>
+86:                 <% if (acao != null && (acao.equals("listarGamesAdmin")) { %>
+87:                     <center>
+88:                         <form action="GamesSrv" method="POST">
+89:                             <p>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.PerfilSrv.processRequest(PerfilSrv.java:77)
+		at controller.PerfilSrv.doPost(PerfilSrv.java:188)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 20:53:37.746 SEVERE [http-nio-8080-exec-82] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the jsp file: [/formularioGames.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+80:                 <%if (acao.equals("adicionarrGamesAdmin"))%>
+81:                     <label for="jogo">adicionar jogo</label>
+82:                     <input type="text" name="nomeJogo">
+83:                 <% } %>
+84:                 <div class="botoes">
+85:                     <input type="submit" value="Enviar" id="btnEnviar">
+86:                     <input type="reset" value="Limpar" id="btnVoltar">
+
+
+An error occurred at line: [247] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [261] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [262] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:59)
+		at controller.GamesSrv.doPost(GamesSrv.java:182)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 20:54:46.960 SEVERE [http-nio-8080-exec-85] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the jsp file: [/formularioGames.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+80:                 <%if (acao.equals("adicionarrGamesAdmin"))%>
+81:                     <label for="jogo">adicionar jogo</label>
+82:                     <input type="text" name="nomeJogo">
+83:                 <% } %>
+84:                 <div class="botoes">
+85:                     <input type="submit" value="Enviar" id="btnEnviar">
+86:                     <input type="reset" value="Limpar" id="btnVoltar">
+
+
+An error occurred at line: [247] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [261] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [262] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:54)
+		at controller.GamesSrv.doPost(GamesSrv.java:182)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 20:55:35.417 SEVERE [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the jsp file: [/formularioGames.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+80:                 <%if (acao.equals("adicionarrGamesAdmin"))%>
+81:                     <label for="jogo">adicionar jogo</label>
+82:                     <input type="text" name="nomeJogo">
+83:                 <% } %>
+84:                 <div class="botoes">
+85:                     <input type="submit" value="Enviar" id="btnEnviar">
+86:                     <input type="reset" value="Limpar" id="btnVoltar">
+
+
+An error occurred at line: [247] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [261] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [262] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:54)
+		at controller.GamesSrv.doPost(GamesSrv.java:182)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 20:58:11.607 SEVERE [http-nio-8080-exec-98] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the jsp file: [/formularioGames.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+80:                 <%if (acao.equals("adicionarrGamesAdmin"))%>
+81:                     <label for="jogo">adicionar jogo</label>
+82:                     <input type="text" name="nomeJogo">
+83:                 <% } %>
+84:                 <div class="botoes">
+85:                     <input type="submit" value="Enviar" id="btnEnviar">
+86:                     <input type="reset" value="Limpar" id="btnVoltar">
+
+
+An error occurred at line: [247] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [261] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [262] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:54)
+		at controller.GamesSrv.doPost(GamesSrv.java:182)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 20:58:22.422 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+20-Feb-2024 20:58:22.422 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+20-Feb-2024 20:59:35.986 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Feb-2024 20:59:35.986 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Feb-2024 20:59:35.990 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@130bd00e')
+20-Feb-2024 21:00:12.210 SEVERE [http-nio-8080-exec-11] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the jsp file: [/formularioGames.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+80:                 <%if (acao.equals("adicionarrGamesAdmin"))%>
+81:                     <label for="jogo">adicionar jogo</label>
+82:                     <input type="text" name="nomeJogo">
+83:                 <% } %>
+84:                 <div class="botoes">
+85:                     <input type="submit" value="Enviar" id="btnEnviar">
+86:                     <input type="reset" value="Limpar" id="btnVoltar">
+
+
+An error occurred at line: [247] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [261] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [262] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:54)
+		at controller.GamesSrv.doPost(GamesSrv.java:182)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
+20-Feb-2024 21:01:21.236 SEVERE [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationDispatcher.invoke Servlet.service() for servlet [jsp] threw exception
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the jsp file: [/formularioGames.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+80:                 <%if (acao.equals("adicionarGamesAdmin"))%>
+81:                     <label for="jogo">adicionar jogo</label>
+82:                     <input type="text" name="nomeJogo">
+83:                 <% } %>
+84:                 <div class="botoes">
+85:                     <input type="submit" value="Enviar" id="btnEnviar">
+86:                     <input type="reset" value="Limpar" id="btnVoltar">
+
+
+An error occurred at line: [247] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [249] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [250] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [258] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [261] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [262] in the generated java file: [C:\Program Files\apache-tomcat-9.0.84\work\Catalina\localhost\projeto_gta6_web\org\apache\jsp\formularioGames_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:531)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:398)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:368)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:352)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:399)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:661)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:425)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:357)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:294)
+		at controller.GamesSrv.processRequest(GamesSrv.java:54)
+		at controller.GamesSrv.doPost(GamesSrv.java:182)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1623)
