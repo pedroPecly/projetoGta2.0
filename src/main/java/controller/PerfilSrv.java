@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,9 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Games;
 import model.Perfil;
-import model.dao.GamesDaoJpa;
 import model.dao.PerfilDaoJpa;
 
 public class PerfilSrv extends HttpServlet {
@@ -70,13 +67,6 @@ public class PerfilSrv extends HttpServlet {
                     rd.forward(request, response);
                     break;
 
-                case "listarGamesAdmin":
-                    rd = request.getRequestDispatcher(
-                            "listagem.jsp?lista=" + listagemJogosAdmin() + "&nome=" + nome + "&senha=" + senha
-                                    + "&acao=" + acao);
-                    rd.forward(request, response);
-                    break;
-
                 case "listagem":
                     if (nome.equals("admin") && senha.equals("admin")) {
                         rd = request.getRequestDispatcher(
@@ -114,31 +104,6 @@ public class PerfilSrv extends HttpServlet {
                     + "<td>" + (i + 1)
                     + "<td>" + perfil.getNome() + "</td>"
                     + "</tr>";
-        }
-        return listaHTML;
-    }
-
-    private String listagemJogosAdmin() {
-        GamesDaoJpa dao = new GamesDaoJpa();
-        List<Games> lista = null;
-        try {
-            lista = dao.listar();
-        } catch (Exception ex) {
-            Logger.getLogger(PerfilSrv.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        String listaHTML = "";
-        for (int i = 0; i < lista.size(); i++) {
-            Games game = lista.get(i);
-            listaHTML = listaHTML
-                    + "<tr>"
-                    + "<td>" + (i + 1)
-                    + "<td>" + game.getNome() + "</td>"
-                    + "<td><form action=PerfilSrv?acao=exclusao method='POST'>"
-                    + "<input type='hidden' name='id' value=" + game.getId()
-                    + "><input type='submit' value=excluir id='btnExcluir'>" + "</form></td>"
-                    + "</tr>";
-
         }
         return listaHTML;
     }

@@ -34,7 +34,7 @@
             <h4>Grand Theft Auto VI</h4>
             <h2>Acesse seu perfil:</h2>
             <% if (nome.equals("admin") && senha.equals("admin")){ %>
-                <form action="PerfilSrv" method="POST">
+                <form action="GamesSrv" method="POST">
                     <input type="hidden" name="acao" value="listarGamesAdmin">
                     <input type="hidden" name="nome" value="<%=nome%>">
                     <input type="hidden" name="senha" value="<%=senha%>">

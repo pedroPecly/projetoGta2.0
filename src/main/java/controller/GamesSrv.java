@@ -50,6 +50,13 @@ public class GamesSrv extends HttpServlet {
                     rd.forward(request, response);
                     break;
 
+                case "listarGamesAdmin":
+                    rd = request.getRequestDispatcher(
+                            "listagem.jsp?lista=" + listagemJogosAdmin(p) + "&nome=" + nome + "&senha=" + senha
+                                    + "&acao=" + acao);
+                    rd.forward(request, response);
+                    break;
+
                 case "preAdicionarJogo":
                     rd = request.getRequestDispatcher("formularioGames.jsp?lista=" + listaJogosBox()
                             + "&acao=adicionarJogo&nome=" + nome + "&senha=" + senha);
@@ -57,14 +64,16 @@ public class GamesSrv extends HttpServlet {
                     break;
 
                 case "preAdicionarGamesAdmin":
-                    rd = request.getRequestDispatcher("formularioGames.jsp?&acao=adicionarGamesAdmin&nome=" + nome + "&senha=" + senha);
+                    rd = request.getRequestDispatcher(
+                            "formularioGames.jsp?&acao=adicionarGamesAdmin&nome=" + nome + "&senha=" + senha);
                     rd.forward(request, response);
                     break;
 
                 case "adicionarGamesAdmin":
                     g = new Games(nomeJogo);
                     daoG.incluir(g);
-                    rd = request.getRequestDispatcher("telaUsuario.jsp?nome=" + p.getNome() + "&senha=" + p.getSenha());
+                    rd = request.getRequestDispatcher("listagem.jsp?acao=listarGamesAdmin&lista="
+                            + listagemJogosAdmin(p) + "&nome=" + p.getNome() + "&senha=" + p.getSenha());
                     rd.forward(request, response);
                     break;
 
@@ -82,11 +91,45 @@ public class GamesSrv extends HttpServlet {
                             + "&acao=listagemJogos&nome=" + nome + "&senha=" + senha);
                     rd.forward(request, response);
                     break;
+
+                case "exclusaoAdmin":
+                    daoG.excluir(daoG.pesquisarPorId(Integer.parseInt(id)));
+                    rd = request.getRequestDispatcher("listagem.jsp?acao=listarGamesAdmin&lista="
+                            + listagemJogosAdmin(p) + "&nome=" + p.getNome() + "&senha=" + p.getSenha());
+                    rd.forward(request, response);
+                    break;
             }
 
         } catch (Exception ex) {
             Logger.getLogger(GamesSrv.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    private String listagemJogosAdmin(Perfil p) {
+        GamesDaoJpa dao = new GamesDaoJpa();
+        List<Games> lista = null;
+        try {
+            lista = dao.listar();
+        } catch (Exception ex) {
+            Logger.getLogger(PerfilSrv.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        String listaHTML = "";
+        for (int i = 0; i < lista.size(); i++) {
+            Games game = lista.get(i);
+            listaHTML = listaHTML
+                    + "<tr>"
+                    + "<td>" + (i + 1)
+                    + "<td>" + game.getNome() + "</td>"
+                    + "<td><form action=GamesSrv?acao=exclusaoAdmin method='POST'>"
+                    + "<input type='hidden' name='id' value=" + game.getId()
+                    + "><input type='hidden' name='nome' value=" + p.getNome()
+                    + "><input type='hidden' name='senha' value=" + p.getSenha()
+                    + "><input type='submit' value=excluir id='btnExcluir'>" + "</form></td>"
+                    + "</tr>";
+
+        }
+        return listaHTML;
     }
 
     private String listagemJogos(Perfil p) {
@@ -148,23 +191,6 @@ public class GamesSrv extends HttpServlet {
             lista = dao.listar();
             for (int i = 0; i < lista.size(); i++) {
                 if (lista.get(i).getNome().equals(nome) && lista.get(i).getSenha().equals(senha)) {
-                    return lista.get(i);
-                }
-            }
-        } catch (Exception ex) {
-            Logger.getLogger(GamesSrv.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        return null;
-    }
-
-    private Games buscarGame(String nomeJogo) {
-        GamesDaoJpa dao = new GamesDaoJpa();
-        List<Games> lista = null;
-        try {
-            lista = dao.listar();
-            for (int i = 0; i < lista.size(); i++) {
-                if (lista.get(i).getNome().equals(nomeJogo)) {
                     return lista.get(i);
                 }
             }
